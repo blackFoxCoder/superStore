@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		table,tr,td 
+		{
+			text-align: center;
+			border: 2px solid black;
+			border-collapse: collapse;
+			width: 1300px;
+			height:35px;
+		}
+		th 
+		{
+			font-size: 3em;
+			font-family: Times;
+		}
+		td, input 
+		{
+			font-family: times;
+			font-size:1.5em;
+			text-align: center;
+		}
+		input{height: 120%;
+			width: 96%;}
+		img {
+			height: 30px;
+			width: 50px;
+		}
+		button 
+		{
+			height: 100%;
+			width: 100%;
+			font-size: 1.2em;
+			background-color: green;
+		}
+		#sum
+		{
+			color: white;
+			font-size: 1.3em
+		}
+	</style>
+</head>
+<body>
+	<table>
+		<th colspan="12">
+			DELIGHT SUPREMACY SUPERMARKET
+		</th>
+		<tr style="font-size: 1.5em; font-family: times; text-align: center;">
+			<td>Image</td>
+			<td>Name</td>
+			<td>In Stock</td>
+			<td>Price(<del>N</del>)</td>
+			<td>Order Quantity</td>
+			<td>Total(<del>N</del>)</td>
+			<td colspan="2">Image Viewer</td>
+		</tr>
+		<tr>
+			<td><img id="img1" src="SuperMarket/eraser.jpg" onmouseout="out()" onmouseover="display1()"></td>
+			<td>Eraser</td>
+			<td id="qtyEraser">100</td>
+			<td>15</td>
+			<td><input id="ordE" onkeyup="eraser()" placeholder="Enter Qty" type="" name="purEraser"></td>
+			<td><input id="pdtE" placeholder="Cost" type="" name="totEraser"></td>
+			<td rowspan="10"><img id="display" style="height: 250px; width: 100%;" src="SuperMarket/home viewing.jpg""></td>
+		</tr>
+		<tr>
+			<td><img src="SuperMarket/pen.jpg" onmouseout="out()" onmouseover="display2()" id="img2"></td>
+			<td>Pens</td>
+			<td id="qtyPen">90</td>
+			<td>30</td>
+			<td><input id="ordP" onkeyup="pens()" placeholder="Enter Qty" type="" name=""></td>
+			<td><input id="pdtP" placeholder="Cost" type="" name=""></td>
+		</tr>
+		<tr>
+			<td><img src="SuperMarket/ruler.jpg" onmouseout="out()" onmouseover="display3()" id="img3"></td>
+			<td>Rulers</td>
+			<td id="qtyRuler">78</td>
+			<td>70</td>
+			<td><input id="ordR" onkeyup="ruler()" placeholder="Enter Qty" type="" name=""></td>
+			<td><input id="pdtR" placeholder="Cost" type="" name=""></td>
+		</tr>
+		<tr>
+			<td><img src="SuperMarket/compass.jpg" onmouseout="out()" onmouseover="display4()" id="img4"></td>
+			<td>Compass</td>
+			<td id="qtyCompass">105</td>
+			<td>50</td>
+			<td><input id="ordC" onkeyup="compass()" placeholder="Enter Qty" type="" name=""></td>
+			<td><input id="pdtC" placeholder="Cost" type="" name=""></td>
+		</tr>
+		<tr>
+			<td><img src="SuperMarket/mathSet.jpg" onmouseout="out()" onmouseover="display5()" id="img5"></td>
+			<td>Math Set(s)</td>
+			<td id="qtyMath">76</td>
+			<td>200</td>
+			<td><input id="ordM" onkeyup="math()" placeholder="Enter Qty" type="" name=""></td>
+			<td><input id="pdtM" placeholder="Cost" type="" name=""></td>
+		</tr>
+		<tr>
+			<td><img src="SuperMarket/backPack.jpg" onmouseout="out()" onmouseover="display6()" id="img6"></td>
+			<td>Back Packs</td>
+			<td id="qtyBack">87</td>
+			<td>2500</td>
+			<td><input id="ordB" onkeyup="back()" placeholder="Enter Qty" type="" name=""></td>
+			<td><input id="pdtB" placeholder="Cost" type="" name=""></td>
+		</tr>
+		<tr>
+			<td><img src="SuperMarket/socks.jpg" onmouseout="out()" onmouseover="display7()" id="img7"></td>
+			<td>Socks</td>
+			<td id="qtySocks">24</td>
+			<td>120</td>
+			<td><input id="ordS" onkeyup="socks()" placeholder="Enter Qty" type="" name=""></td>
+			<td><input id="pdtS" placeholder="Cost" type="" name=""></td>
+		</tr>
+		<tr>
+			<td><img src="SuperMarket/sandals.jpg" onmouseout="out()" onmouseover="display8()" id="img8"></td>
+			<td>Sandals</td>
+			<td id="qtySandals">63</td>
+			<td>700</td>
+			<td><input id="ordSa" onkeyup="sandals()" placeholder="Enter Qty" type="" name=""></td>
+			<td><input id="pdtSa" placeholder="Cost" type="" name=""></td>
+		</tr>
+		<tr>
+			<td><img src="SuperMarket/shoes.jpg" onmouseout="out()" onmouseover="display9()" id="img9"></td>
+			<td>Shoes</td>
+			<td id="qtyShoes">11</td>
+			<td>1500</td>
+			<td><input id="ordSh" onkeyup="shoes()" placeholder="Enter Qty" type="" name=""></td>
+			<td><input id="pdtSh" placeholder="Cost" type="" name=""></td>
+		</tr>
+		<tr>
+			<td><img src="SuperMarket/books.jpg" onmouseout="out()" onmouseover="display10()" id="img10"></td>
+			<td>Books</td>
+			<td id="qtyBooks">25</td>
+			<td>70</td>
+			<td><input id="ordBo" onkeyup="books()" placeholder="Enter Qty" type="" name=""></td>
+			<td><input id="pdtBo" placeholder="Cost" type="" name=""></td>
+		</tr>
+		<tr>
+			<td colspan="2"><button>Use Calculator</button></td>
+			<td colspan="2">Grand Total</td>
+			<td colspan="2" style="background-color: blue;"><div id="sum" type="" name=""></div></td>
+			<td><button onclick="checkOut()">Check Out</button></td>
+		</tr>
+	</table>
+	<script type="text/javascript" src="supermarket.js"></script>
+
+</body>
+</html>
